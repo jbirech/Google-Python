@@ -51,13 +51,29 @@ def listmethods():
     lst.insert(0, 'wohoo')
     print lst
 
+'''
+read a file funtion
+'''
 
+def OpenFile(filename):
+    f = open(filename, 'rU')#r stands for read, U gets read of unix file endings
+    for filew in  f:
+        print filew,
+    
+    filew1 = f.readlines()
+    print filew1
+    
+    txt = f.read()
+    print txt
+    
+    f.close()
 
 def main():
     #print repeat("whoop whoop", True)
     #print repeat("whoop whoop", False)
-    testin()
-    listmethods()
+    #testin()
+    #listmethods()
+    OpenFile(sys.argv[1])
 
 if __name__ == '__main__':
     main()
