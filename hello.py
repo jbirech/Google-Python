@@ -68,12 +68,22 @@ def OpenFile(filename):
     
     f.close()
 
+def tri_recursion(k):
+    if (k > 0):
+        result = k+tri_recursion(k-1)
+        print result
+    else:
+        print "oopsy!!!"
+        result = 0
+    return result
+
 def main():
     #print repeat("whoop whoop", True)
     #print repeat("whoop whoop", False)
     #testin()
     #listmethods()
-    OpenFile(sys.argv[1])
+    #OpenFile(sys.argv[1])
+    tri_recursion(0)
 
 if __name__ == '__main__':
     main()
